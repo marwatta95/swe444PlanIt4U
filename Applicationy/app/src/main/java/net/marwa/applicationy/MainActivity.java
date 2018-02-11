@@ -1,6 +1,7 @@
 package net.marwa.applicationy;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        if(firebaseAuth.getCurrentUser()!=null){
+            finish();
+            startActivity(new Intent(getApplicationContext(), activity_profile.class));
+        }
+
+
         progressDialog = new ProgressDialog(this);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
@@ -67,12 +75,15 @@ firebaseAuth.createUserWithEmailAndPassword(email,password)
             public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful()){
 
-                   Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-               }else{
-                   Toast.makeText(MainActivity.this, "Coul not register. please try again", Toast.LENGTH_SHORT).show();
+                       finish();
+                       startActivity(new Intent(getApplicationContext(), activity_profile.class));
+                   }
+
+               else{
+                   Toast.makeText(MainActivity.this, "Could not register. please try again", Toast.LENGTH_SHORT).show();
 
                }
-
+progressDialog.dismiss();
 
             }
         });
@@ -88,6 +99,7 @@ if(view==buttonRegister){
 }
 if(view==textViewSignin){
     //open
+    startActivity(new Intent(this, LoginActivity.class));
 }
 
     }
