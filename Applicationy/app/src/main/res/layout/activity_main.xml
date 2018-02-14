@@ -13,7 +13,8 @@
         android:layout_centerVertical="true"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="88dp">
+        tools:layout_editor_absoluteY="88dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
