@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -24,6 +27,7 @@ private Button buttonSignIn;
 private EditText editTextEmail;
 private EditText editTextPassword;
 private TextView textViewSignup;
+    private DatabaseReference databaseReference;
 
 private FirebaseAuth firebaseAuth;
 
@@ -39,6 +43,7 @@ private ProgressDialog progressDialog;
             finish();
             startActivity(new Intent(getApplicationContext(), activity_profile.class));
         }
+        databaseReference= FirebaseDatabase.getInstance().getReference();
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -68,7 +73,7 @@ private ProgressDialog progressDialog;
             return;
         }
 
-        progressDialog.setMessage("Registering User...");
+        progressDialog.setMessage("Log in...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email, password)
@@ -76,10 +81,16 @@ private ProgressDialog progressDialog;
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                          progressDialog.dismiss();
-                         if(task.isSuccessful()){
+                         if(task.isSuccessful()) {
+
+                             if ((editTextEmail.getText().toString()).equals("marwatta95@gmail.com")) {
+                                 finish();
+                                 startActivity(new Intent(getApplicationContext(), AdminActivity.class));
+                             }
+                             else{
                              finish();
-                             startActivity(new Intent(getApplicationContext(), activity_profile.class));
-                         }
+                             startActivity(new Intent(getApplicationContext(), UserActivity.class));
+                         }                         }
                     }
                 });
     }

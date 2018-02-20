@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.marwa.applicationy.LoginActivity">
+    tools:context="net.marwa.applicationy.LoginActivity"
+    android:background="@drawable/two"
+    >
 
 
     <LinearLayout
@@ -14,15 +16,15 @@
         android:layout_centerVertical="true"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="131dp"
+        tools:layout_editor_absoluteY="88dp"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="User Login"
+            android:text="Please Login"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
         <EditText
@@ -36,7 +38,7 @@
 
         <EditText
             android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:hint="Enter Your Password"
@@ -54,12 +56,12 @@
             android:id="@+id/textViewSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:text="Not have an account? Signup Here"
             android:textAlignment="center" />
 
 
     </LinearLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>

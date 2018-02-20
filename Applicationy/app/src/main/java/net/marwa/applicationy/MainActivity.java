@@ -9,7 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog progressDialog;
 
     private FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+
+
         if(firebaseAuth.getCurrentUser()!=null){
+
             finish();
             startActivity(new Intent(getApplicationContext(), activity_profile.class));
         }
@@ -49,7 +53,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
     textViewSignin =(TextView) findViewById(R.id.textViewSignin);
 
-buttonRegister.setOnClickListener(this);
+
+
+
+
+        buttonRegister.setOnClickListener(this);
 textViewSignin.setOnClickListener(this);
     }
 
@@ -66,8 +74,10 @@ if(TextUtils.isEmpty(password)){
 return;
  }
 
+
  progressDialog.setMessage("Registering User...");
 progressDialog.show();
+
 
 firebaseAuth.createUserWithEmailAndPassword(email,password)
         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
