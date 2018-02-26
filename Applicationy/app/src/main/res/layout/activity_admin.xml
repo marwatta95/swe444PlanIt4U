@@ -39,7 +39,6 @@
                 android:layout_height="wrap_content" />
 
         </RelativeLayout>
-
         <GridLayout
             android:columnCount="2"
             android:rowCount="6"
@@ -543,6 +542,8 @@
 
 
         </GridLayout>
+
+
 
 
 
