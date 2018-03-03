@@ -27,21 +27,21 @@
             android:fillViewport="true">
 
             <LinearLayout
+                android:paddingHorizontal="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
-
-
-        <TextView
-            android:id="@+id/textGrid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Hello Admin!"
-            android:textColor="@android:color/white"
-            android:textSize="34sp" />
+                <TextView
+                    android:id="@+id/textGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="serif"
+                    android:text="\nHello Admin!\n"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="34sp" />
 
 
 
@@ -53,7 +53,7 @@
             android:orientation="horizontal">
             <ImageButton
 
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/hall"
@@ -64,9 +64,10 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
+
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/decoration"
@@ -86,7 +87,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/food"
@@ -100,7 +101,7 @@
                 />
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/photographer"
@@ -121,7 +122,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/dj"
@@ -134,7 +135,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/band"
@@ -155,7 +156,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/singer"
@@ -168,7 +169,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/hair"
@@ -188,7 +189,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/makeup"
@@ -201,7 +202,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/clown"
@@ -221,7 +222,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/invitation"
@@ -234,7 +235,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/custom"
@@ -255,18 +256,16 @@
         </ScrollView>
 
 
-
-
-
-
-
         <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
 
-        android:text="Logout" />
+            android:fontFamily="serif"
+            android:text="Logout"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
 
 
 
