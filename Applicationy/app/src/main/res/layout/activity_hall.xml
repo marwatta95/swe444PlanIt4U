@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.marwa.applicationy.HallActivity"
+    android:background="@drawable/two"
+    >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+            <Button
+                android:id="@+id/add"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:onClick="uploadData"
+                android:text="ADD Hall" />
+            <TextView
+                android:id="@+id/textViewUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Info of the hall"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/editTextDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price in SR"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capacity"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/uploadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Upload Image"
+                android:onClick="browseImages"
+                />
+            <ImageView
+                android:id="@+id/insertImages"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:onClick="uploadData"
+                android:text="ADD the new hall" />
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+
+                android:layout_gravity="center_horizontal"
+
+                android:text="Logout" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+
