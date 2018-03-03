@@ -10,8 +10,8 @@ public class foodClass {
     public Object image;
     public String name;
     public foodClass(String name,String type,Object image){
-        name=this.name;
-        type=this.type;
-        image=this.image;
+        this.name=name;
+        this.type=type;
+        this.image=image;
     }
 }
