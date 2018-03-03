@@ -24,7 +24,15 @@
         <activity android:name=".AdminActivity" />
         <activity android:name=".decoration" />
         <activity android:name=".food" />
-        <activity android:name=".photographer"></activity>
+        <activity android:name=".photographer" />
+        <activity android:name=".DJ" />
+        <activity android:name=".band" />
+        <activity android:name=".singer" />
+        <activity android:name=".hairDresser" />
+        <activity android:name=".makeup" />
+        <activity android:name=".custome" />
+        <activity android:name=".clown" />
+        <activity android:name=".invitation"></activity>
     </application>
 
 </manifest>
