@@ -3,6 +3,9 @@
     package="net.marwa.applicationy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +25,18 @@
         <activity android:name=".activity_profile" />
         <activity android:name=".UserActivity" />
         <activity android:name=".AdminActivity" />
+        <activity android:name=".HallActivity" />
+        <activity android:name=".DecorActivity" />
+        <activity android:name=".FoodActivity" />
+        <activity android:name=".PhotoActivity" />
+        <activity android:name=".DjActivity" />
+        <activity android:name=".BandActivity" />
+        <activity android:name=".SingerActivity" />
+        <activity android:name=".HairActivity" />
+        <activity android:name=".MakeupActivity" />
+        <activity android:name=".ClownActivity" />
+        <activity android:name=".InvitationActivity" />
+        <activity android:name=".CustomActivity"></activity>
     </application>
 
 </manifest>

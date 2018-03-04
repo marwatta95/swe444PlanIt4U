@@ -11,13 +11,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
-        android:layout_marginBottom="5sp"
-        android:layout_marginLeft="2sp"
-        android:layout_marginRight="5sp"
-        android:layout_marginTop="0sp"     >
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
 
         <ScrollView
@@ -27,21 +25,238 @@
             android:fillViewport="true">
 
             <LinearLayout
+                android:paddingHorizontal="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
+                <TextView
+                    android:id="@+id/textGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:text="Hello Admin!"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp" />
 
 
-        <TextView
-            android:id="@+id/textGrid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Hello Admin!"
-            android:textColor="@android:color/white"
-            android:textSize="34sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/hall"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hall" />
+
+                    <ImageButton
+                        android:id="@+id/decoration"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/decoration" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/food"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food" />
+
+                    <ImageButton
+                        android:id="@+id/photographer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/photographer" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/dj"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dj" />
+
+                    <ImageButton
+                        android:id="@+id/band"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/band" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/singer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/singer" />
+
+                    <ImageButton
+                        android:id="@+id/hair"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hair" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/makeup"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/makeup" />
+
+                    <ImageButton
+                        android:id="@+id/clown"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/clown" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/invitation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/invitation" />
+
+                    <ImageButton
+                        android:id="@+id/custom"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="2sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginTop="0sp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/custom" />
+                </LinearLayout>
+=======
+                    android:fontFamily="serif"
+                    android:text="\nHello Admin!\n"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="34sp" />
 
 
 
@@ -53,7 +268,7 @@
             android:orientation="horizontal">
             <ImageButton
 
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/hall"
@@ -64,9 +279,10 @@
                 android:adjustViewBounds="true"
                 android:padding="0dp"
                 android:scaleType="fitXY"
+
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/decoration"
@@ -86,7 +302,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/food"
@@ -100,7 +316,7 @@
                 />
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/photographer"
@@ -121,7 +337,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/dj"
@@ -134,7 +350,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/band"
@@ -155,7 +371,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/singer"
@@ -168,7 +384,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/hair"
@@ -188,7 +404,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/makeup"
@@ -201,7 +417,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/clown"
@@ -221,7 +437,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/invitation"
@@ -234,7 +450,7 @@
                 android:scaleType="fitXY"
                 />
             <ImageButton
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/custom"
@@ -248,6 +464,7 @@
                 />
         </LinearLayout>
 
+>>>>>>> b49ce8ebfe99fc4b59d59f180bbb88aac675646f
 
 
             </LinearLayout>
@@ -255,22 +472,24 @@
         </ScrollView>
 
 
-
-
-
-
-
         <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
 
-        android:text="Logout" />
+=======
+
+            android:fontFamily="serif"
+            android:text="Logout"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
 
 
 
+>>>>>>> b49ce8ebfe99fc4b59d59f180bbb88aac675646f
 
+            android:text="Logout" />
 
 
     </LinearLayout>
