@@ -37,16 +37,9 @@ public class MyAdapter extends ArrayAdapter<Hall> {
 
         ImageView imageView = (ImageView) view.findViewById(R.id.getImages);
         TextView name = (TextView) view.findViewById(R.id.getName);
-        TextView des = (TextView) view.findViewById(R.id.getDes);
-        TextView address = (TextView) view.findViewById(R.id.getAddress);
-        TextView price = (TextView) view.findViewById(R.id.getPrice);
-        TextView capacity = (TextView) view.findViewById(R.id.getCapacity);
 
         name.setText(list.get(position).getName());
-        des.setText(list.get(position).getDescription());
-        address.setText(list.get(position).getAddress());
-        price.setText(list.get(position).getPrice()+"");
-        capacity.setText(list.get(position).getCapacity()+"");
+
 
         Glide.with(activity).load(list.get(position).getImageUri()).into(imageView);
 

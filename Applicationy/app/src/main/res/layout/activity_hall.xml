@@ -7,10 +7,8 @@
     tools:context="net.marwa.applicationy.HallActivity"
     android:background="@drawable/two"
     >
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true">
+
+
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
@@ -21,10 +19,20 @@
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
             <ListView
                 android:id="@+id/list1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></ListView>
+            </ScrollView>
             <Button
                 android:id="@+id/add"
                 android:layout_width="300dp"
@@ -86,6 +94,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <Button
+                android:id="@+id/addNew"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -105,6 +114,6 @@
 
         </LinearLayout>
 
-    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
 

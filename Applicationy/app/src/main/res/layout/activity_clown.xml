@@ -4,6 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="net.marwa.applicationy.ClownActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/two"
+        tools:context="net.marwa.applicationy.clown">>
+
+        <TextView
+            android:id="@+id/clown_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <EditText
+            android:id="@+id/clown_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <Button
+            android:id="@+id/clown_image"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:text="upload image" />
+
+        <Spinner
+            android:id="@+id/clown_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>>
+
+
+
 
 </android.support.constraint.ConstraintLayout>

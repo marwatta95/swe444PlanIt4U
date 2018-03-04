@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
 
+
                     android:text="Hello Admin!"
                     android:textColor="@android:color/white"
                     android:textSize="34sp" />
@@ -252,11 +253,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/custom" />
                 </LinearLayout>
-=======
-                    android:fontFamily="serif"
-                    android:text="\nHello Admin!\n"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="34sp" />
+
 
 
 
@@ -464,7 +461,7 @@
                 />
         </LinearLayout>
 
->>>>>>> b49ce8ebfe99fc4b59d59f180bbb88aac675646f
+
 
 
             </LinearLayout>
@@ -476,20 +473,14 @@
             android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
 
-=======
-
+            android:layout_gravity="center_horizontal"
             android:fontFamily="serif"
             android:text="Logout"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
 
-
->>>>>>> b49ce8ebfe99fc4b59d59f180bbb88aac675646f
-
-            android:text="Logout" />
 
 
     </LinearLayout>

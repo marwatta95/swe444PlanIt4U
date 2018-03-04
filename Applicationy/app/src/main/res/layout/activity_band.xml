@@ -4,6 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="net.marwa.applicationy.BandActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/two"
+        tools:context="net.marwa.applicationy.band">
+
+        <TextView
+            android:id="@+id/band_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Band"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="40dp" />
+
+
+        <Spinner
+        android:id="@+id/band_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/numberOfMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="number of members"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/upload_sample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upload image "
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="100dp" />
+
+
+        <Button
+            android:id="@+id/add_band"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            tools:layout_editor_absoluteX="139dp"
+            tools:layout_editor_absoluteY="472dp" />
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

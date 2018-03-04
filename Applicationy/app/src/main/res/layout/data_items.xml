@@ -18,37 +18,6 @@
         android:padding="10dp"
         android:text="Name here"
         android:textSize="22sp" />
-    <TextView
-        android:id="@+id/getDes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Description here"
-        android:textSize="22sp" />
-    <TextView
-        android:id="@+id/getAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Address here"
-        android:textSize="22sp" />
-    <TextView
-        android:id="@+id/getPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Price here"
-        android:textSize="22sp" />
-    <TextView
-        android:id="@+id/getCapacity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Capacity here"
-        android:textSize="22sp" />
+
 
 </LinearLayout>

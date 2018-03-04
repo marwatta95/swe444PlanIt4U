@@ -54,7 +54,9 @@ public class HallActivity extends AppCompatActivity {
     private Button buttonLogout;
     private DatabaseReference databaseReference;
     private EditText editTextName,editTextDes,editTextAddress,editTextPrice,editTextCapacity;
+    private Button addNew;
     private Button add;
+
     private Button upload;
 
     public static final String STORAGE_PATH = "images/";
@@ -83,11 +85,14 @@ public class HallActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
         add=(Button) findViewById(R.id.add);
-       upload=(Button) findViewById(R.id.uploadImage);upload.setVisibility(View.GONE);
+        addNew=(Button) findViewById(R.id.addNew);
+        addNew.setVisibility(View.GONE);
+        upload=(Button) findViewById(R.id.uploadImage);upload.setVisibility(View.GONE);
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 listView.setVisibility(View.GONE);
                 add .setVisibility(View.GONE);
+                addNew.setVisibility(View.VISIBLE);
                 imageView.setVisibility(View.VISIBLE);
                 editTextName.setVisibility(View.VISIBLE);
                 editTextDes.setVisibility(View.VISIBLE);
