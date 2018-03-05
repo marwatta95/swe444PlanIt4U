@@ -41,7 +41,8 @@ public class activity_profile extends AppCompatActivity implements View.OnClickL
             startActivity(new Intent(this, LoginActivity.class));
         }
 
-
+        buttonLogout = (Button) findViewById(R.id.buttonLogout);
+        buttonLogout.setVisibility(View.GONE);
         databaseReference= FirebaseDatabase.getInstance().getReference();
         editTextAddress=(EditText) findViewById(R.id.editTextAddress);
         editTextFirst=(EditText) findViewById(R.id.editTextFirstName);
@@ -53,7 +54,6 @@ public class activity_profile extends AppCompatActivity implements View.OnClickL
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
 
         textViewUserEmail.setText("Now tell us about yourself :)");
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
 
         buttonLogout.setOnClickListener(this);
         buttonSave.setOnClickListener(this);
@@ -91,6 +91,8 @@ if(view == buttonLogout){
 }
 if (view == buttonSave){
     saveUserInformation();
+    buttonLogout.setVisibility(View.VISIBLE);
+
 }
     }
 }

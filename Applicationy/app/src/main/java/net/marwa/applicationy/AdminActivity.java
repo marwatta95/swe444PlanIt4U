@@ -157,7 +157,7 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
         buttonLogout =(Button)findViewById(R.id.buttonLogout);
-        custom.setOnClickListener(new View.OnClickListener()   {
+        buttonLogout.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
                 try {
                     firebaseAuth.signOut();

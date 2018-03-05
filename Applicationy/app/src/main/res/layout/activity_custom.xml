@@ -4,71 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.marwa.applicationy.CustomActivity">
+    tools:context="net.marwa.applicationy.CustomActivity"
+    android:background="@drawable/two"
+    >
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/two"
-        tools:context="net.marwa.applicationy.custome">>
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/custome"
+
+
+        <ScrollView
             android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <ListView
+                android:id="@+id/list11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
+        <Button
+            android:id="@+id/add10"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD Custom" />
+
+
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editTextPrice10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="type" />
-
-        <Spinner
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Spinner
-            android:id="@+id/custome_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/custome_model"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="model" />
-
-        <EditText
-            android:id="@+id/custome_designer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="designer" />
+            android:hint="Price in SR"
+            android:inputType="number" />
 
         <Button
-            android:id="@+id/add_custome"
-            android:layout_width="166dp"
+            android:id="@+id/uploadImage10"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:layout_gravity="center_horizontal"
+            android:text="Upload Image"
+            android:onClick="browseImages"
+            />
+        <ImageView
+            android:id="@+id/insertImages10"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/ic_launcher" />
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+
+
+            <RadioButton
+                android:id="@+id/radioWedding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wedding" />
+
+            <RadioButton
+                android:id="@+id/radioBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthday" />
+            <RadioButton
+                android:id="@+id/radioGraduation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduatin" />
+            <Button
+                android:id="@+id/addNew10"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:onClick="uploadData"
+                android:text="ADD the new Food" />
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+
+                android:layout_gravity="center_horizontal"
+
+                android:text="Logout" />
+
+
+        </RadioGroup>
+
+
 
     </LinearLayout>
 
+
 </android.support.constraint.ConstraintLayout>
+
+
+

@@ -50,7 +50,6 @@ public class HallActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     ImageView imageView;
-    private TextView textViewUserEmail;
     private Button buttonLogout;
     private DatabaseReference databaseReference;
     private EditText editTextName,editTextDes,editTextAddress,editTextPrice,editTextCapacity;
@@ -59,8 +58,8 @@ public class HallActivity extends AppCompatActivity {
 
     private Button upload;
 
-    public static final String STORAGE_PATH = "images/";
-    public static final String DATABASE_PATH = "mainObject";
+    public static final String STORAGE_PATH = "HallsImages/";
+    public static final String DATABASE_PATH = "Halls";
     private Uri imageUri;
 
     private StorageReference storageReference;
@@ -74,6 +73,8 @@ public class HallActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hall);
+        firebaseAuth = FirebaseAuth.getInstance();
+
         listView = (ListView) findViewById(R.id.list1);
         imageView = (ImageView) findViewById(R.id.insertImages);
         imageView.setVisibility(View.GONE);
@@ -88,6 +89,18 @@ public class HallActivity extends AppCompatActivity {
         addNew=(Button) findViewById(R.id.addNew);
         addNew.setVisibility(View.GONE);
         upload=(Button) findViewById(R.id.uploadImage);upload.setVisibility(View.GONE);
+        buttonLogout = (Button) findViewById(R.id.buttonLogout);
+        buttonLogout.setOnClickListener(new View.OnClickListener()   {
+            public void onClick(View v)  {
+                try {
+                    firebaseAuth.signOut();
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 listView.setVisibility(View.GONE);
@@ -107,7 +120,7 @@ public class HallActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Fetching Please wait");
+        progressDialog.setTitle("Please wait");
         progressDialog.show();
 
         databaseReference = FirebaseDatabase.getInstance().getReference(HallActivity.DATABASE_PATH);
@@ -166,7 +179,7 @@ public class HallActivity extends AppCompatActivity {
 
     public void uploadData(View view){
 
-        if(imageUri != null){
+        if(imageUri != null ){
             // insert data
 
             final ProgressDialog progressDialog = new ProgressDialog(this);

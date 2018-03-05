@@ -4,71 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.marwa.applicationy.HairActivity">
+    tools:context="net.marwa.applicationy.HairActivity"
+    android:background="@drawable/two"
+    >
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/two"
-        tools:context="net.marwa.applicationy.hairDresser">
-
-        <TextView
-            android:id="@+id/hairDresser_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="HairDresser"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="40dp" />
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        <EditText
-            android:id="@+id/hairDresser_Fname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="First name"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-
-        <EditText
-            android:id="@+id/hairDresser_Lname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Last name"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Spinner
-            android:id="@+id/gender"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
 
+            <ListView
+                android:id="@+id/list7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
         <Button
-            android:id="@+id/add_hairDresser"
+            android:id="@+id/add6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD Hair dresser" />
+
+        <EditText
+            android:id="@+id/editTextFirstName6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/editTextLastName6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextPrice6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price for a party"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/editTextPhone6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number "
+            android:inputType="number" />
+        <Button
+            android:id="@+id/addNew6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD the new Hair dresser" />
+        <Button
+            android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            tools:layout_editor_absoluteX="139dp"
-            tools:layout_editor_absoluteY="472dp" />
+            android:background="@color/colorPrimary"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text="Logout" />
+
+
+
+
+
+
     </LinearLayout>
 
+
 </android.support.constraint.ConstraintLayout>
+
+
+

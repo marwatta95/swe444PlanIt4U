@@ -1,18 +1,18 @@
 package net.marwa.applicationy;
 
 
-public class Decor {
+public class Custom {
     String type;
     double price;
     String imageUri;
 
-    public Decor(String type,double price, String imageUri) {
+    public Custom(String type,double price, String imageUri) {
         this.type=type;
         this.price=price;
         this.imageUri = imageUri;
     }
 
-    public Decor() {
+    public Custom() {
     }
     public String getType(){ return type;}
     public double getPrice()

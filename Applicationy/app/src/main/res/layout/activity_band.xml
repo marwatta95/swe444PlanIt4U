@@ -4,73 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="net.marwa.applicationy.BandActivity">
+    tools:context="net.marwa.applicationy.BandActivity"
+    android:background="@drawable/two"
+    >
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/two"
-        tools:context="net.marwa.applicationy.band">
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/band_ID"
-            android:layout_width="wrap_content"
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <ListView
+                android:id="@+id/list9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
+        <Button
+            android:id="@+id/add8"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Band"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="40dp" />
-
-
-        <Spinner
-        android:id="@+id/band_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD Band" />
 
         <EditText
-            android:id="@+id/numberOfMembers"
-            android:layout_width="wrap_content"
+            android:id="@+id/editTextFirstName8"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="number of members"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:hint="Name"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/editTextLastName8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of members"
+            android:inputType="number" />
 
+        <EditText
+            android:id="@+id/editTextPrice8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price for a party"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/editTextPhone8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number "
+            android:inputType="number" />
         <Button
-            android:id="@+id/upload_sample"
-            android:layout_width="wrap_content"
+            android:id="@+id/addNew8"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="upload image "
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="100dp" />
-
-
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD the new Band" />
         <Button
-            android:id="@+id/add_band"
+            android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            tools:layout_editor_absoluteX="139dp"
-            tools:layout_editor_absoluteY="472dp" />
+            android:background="@color/colorPrimary"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text="Logout" />
+
+
+
+
+
+
     </LinearLayout>
 
 
-
 </android.support.constraint.ConstraintLayout>
+
+
+

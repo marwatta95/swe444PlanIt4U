@@ -4,76 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.marwa.applicationy.DecorActivity">
-
+    tools:context="net.marwa.applicationy.DecorActivity"
+    android:background="@drawable/two"
+    >
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="392dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
-        tools:ignore="MissingConstraints">
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Decoration"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="40dp" />
 
-        <Button
-            android:id="@+id/upload_decoration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="upload image "
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="100dp" />
 
-        <EditText
-            android:id="@+id/decoration_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="ID "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/decoration_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:ems="10"
-            android:inputType="number"
-            android:text="price"
-            app:layout_constraintLeft_toLeftOf="parent"
-            tools:layout_editor_absoluteY="333dp" />
-
-        <Spinner
-            android:id="@+id/type"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
 
+            <ListView
+                android:id="@+id/list2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </ScrollView>
         <Button
-            android:id="@+id/add_decoration"
+            android:id="@+id/add1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD Decoration" />
+        <TextView
+            android:id="@+id/textViewUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            tools:layout_editor_absoluteX="139dp"
-            tools:layout_editor_absoluteY="472dp" />
+            android:layout_gravity="center_horizontal"
+            android:text="Info of the Decoratin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+
+        <EditText
+            android:id="@+id/editTextPrice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price in SR"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/uploadImage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Upload Image"
+            android:onClick="browseImages"
+            />
+        <ImageView
+            android:id="@+id/insertImages1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/ic_launcher" />
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioWedding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wedding"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthday" />
+
+            <RadioButton
+                android:id="@+id/radioGraduation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduation" />
+        <Button
+            android:id="@+id/addNew1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:onClick="uploadData"
+            android:text="ADD the new Decoration" />
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+
+            android:layout_gravity="center_horizontal"
+
+            android:text="Logout" />
+
+
+        </RadioGroup>
+
+
+
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
+
+
+
