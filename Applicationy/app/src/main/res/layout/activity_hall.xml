@@ -20,7 +20,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
+            <TextView
+                android:id="@+id/textViewUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="The Halls you have just click to delete"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -40,13 +46,7 @@
                 android:background="@color/colorPrimary"
                 android:onClick="uploadData"
                 android:text="ADD Hall" />
-            <TextView
-                android:id="@+id/textViewUserEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Info of the hall"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
             <EditText
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
@@ -104,6 +104,7 @@
                 android:id="@+id/buttonLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
 
                 android:layout_gravity="center_horizontal"

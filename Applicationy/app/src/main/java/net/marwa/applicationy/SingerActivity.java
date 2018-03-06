@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,6 +33,8 @@ import java.util.List;
 
 public class SingerActivity extends AppCompatActivity {
     ListView listView;
+    final ArrayList<String> keyList = new ArrayList<>();
+
     List<Singer> list;
     MyAdapter5 myAdapter;
     ProgressDialog progressDialog;
@@ -110,7 +113,12 @@ public class SingerActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 progressDialog.dismiss();
                 list.clear();
+                for(DataSnapshot snap : dataSnapshot.getChildren()){
+                    keyList.add(snap.getKey());
 
+                    Singer singer = snap.getValue(Singer.class);
+                    list.add(singer);
+                }
 
                 myAdapter = new MyAdapter5 (SingerActivity.this,R.layout.data_items3,list);
                 listView.setAdapter(myAdapter);
@@ -122,7 +130,18 @@ public class SingerActivity extends AppCompatActivity {
 
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                list.remove(position);
+                myAdapter.notifyDataSetChanged();
 
+                databaseReference.getRoot().child(DATABASE_PATH).child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+                Toast.makeText(getApplicationContext(),"Deleted Successfully!!!",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
 

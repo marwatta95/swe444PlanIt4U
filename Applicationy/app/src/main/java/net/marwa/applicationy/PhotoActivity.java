@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,6 +33,8 @@ import java.util.List;
 
 public class PhotoActivity extends AppCompatActivity {
     ListView listView;
+    final ArrayList<String> keyList = new ArrayList<>();
+
     List<Photographer> list;
     MyAdapter3 myAdapter;
     ProgressDialog progressDialog;
@@ -112,6 +115,8 @@ public class PhotoActivity extends AppCompatActivity {
                 list.clear();
 
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
+                    keyList.add(snap.getKey());
+
                     Photographer photog = snap.getValue(Photographer.class);
                     list.add(photog);
                 }
@@ -125,7 +130,18 @@ public class PhotoActivity extends AppCompatActivity {
 
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                list.remove(position);
+                myAdapter.notifyDataSetChanged();
 
+                databaseReference.getRoot().child(DATABASE_PATH).child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+                Toast.makeText(getApplicationContext(),"Deleted Successfully!!!",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
 

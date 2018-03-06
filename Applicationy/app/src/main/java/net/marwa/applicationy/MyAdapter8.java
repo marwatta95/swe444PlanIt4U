@@ -43,7 +43,7 @@ public class MyAdapter8 extends ArrayAdapter<Band> {
 
 
         textView1.setText(list.get(position).getFirst());
-        textView2.setText(list.get(position).getLast());
+        textView2.setText(Integer.toString(list.get(position).getLast()));
         return view;
     }
 }

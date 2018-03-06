@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,6 +33,8 @@ import java.util.List;
 
 public class HairActivity extends AppCompatActivity {
     ListView listView;
+    final ArrayList<String> keyList = new ArrayList<>();
+
     List<Hair> list;
     MyAdapter6 myAdapter;
     ProgressDialog progressDialog;
@@ -109,7 +112,12 @@ public class HairActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 progressDialog.dismiss();
                 list.clear();
+                for(DataSnapshot snap : dataSnapshot.getChildren()){
+                    keyList.add(snap.getKey());
 
+                    Hair hair = snap.getValue(Hair.class);
+                    list.add(hair);
+                }
 
                 myAdapter = new MyAdapter6 (HairActivity.this,R.layout.data_items3,list);
                 listView.setAdapter(myAdapter);
@@ -121,7 +129,19 @@ public class HairActivity extends AppCompatActivity {
 
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                list.remove(position);
+                myAdapter.notifyDataSetChanged();
 
+                databaseReference.getRoot().child(DATABASE_PATH).child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+
+                Toast.makeText(getApplicationContext(),"Deleted Successfully!!!",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
 

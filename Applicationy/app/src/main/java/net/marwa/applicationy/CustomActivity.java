@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v7.widget.MenuPopupWindow;
 import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -44,6 +45,8 @@ import java.util.List;
 
 public class CustomActivity extends AppCompatActivity {
     ListView listView;
+    final ArrayList<String> keyList = new ArrayList<>();
+
     List<Custom> list;
     MyAdapter10 myAdapter;
     ProgressDialog progressDialog;
@@ -84,8 +87,8 @@ public class CustomActivity extends AppCompatActivity {
         radioType.setVisibility(View.GONE);
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
-        add10=(Button) findViewById(R.id.add2);
-        addNew10=(Button) findViewById(R.id.addNew2);
+        add10=(Button) findViewById(R.id.add10);
+        addNew10=(Button) findViewById(R.id.addNew10);
         addNew10.setVisibility(View.GONE);
         upload10=(Button) findViewById(R.id.uploadImage10);upload10.setVisibility(View.GONE);
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
@@ -128,6 +131,8 @@ public class CustomActivity extends AppCompatActivity {
                 list.clear();
 
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
+                    keyList.add(snap.getKey());
+
                     Custom custom = snap.getValue(Custom.class);
                     list.add(custom);
                 }
@@ -142,7 +147,18 @@ public class CustomActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                list.remove(position);
+                myAdapter.notifyDataSetChanged();
 
+                databaseReference.getRoot().child(DATABASE_PATH).child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+                Toast.makeText(getApplicationContext(),"Deleted Successfully!!!",Toast.LENGTH_LONG).show();
+
+            }
+        });
     }
     public void browseImages(View view){
         Intent intent = new Intent();

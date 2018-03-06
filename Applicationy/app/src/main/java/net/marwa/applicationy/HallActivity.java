@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v7.widget.MenuPopupWindow;
 import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -44,7 +45,9 @@ import java.util.List;
 
 public class HallActivity extends AppCompatActivity {
     ListView listView;
-     List<Hall> list;
+    final ArrayList<String> keyList = new ArrayList<>();
+
+    List<Hall> list;
     MyAdapter myAdapter;
     ProgressDialog progressDialog;
 
@@ -132,6 +135,8 @@ public class HallActivity extends AppCompatActivity {
                 list.clear();
 
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
+                    keyList.add(snap.getKey());
+
                     Hall hall = snap.getValue(Hall.class);
                     list.add(hall);
                 }
@@ -146,6 +151,18 @@ public class HallActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                list.remove(position);
+                myAdapter.notifyDataSetChanged();
+
+                databaseReference.getRoot().child(DATABASE_PATH).child(keyList.get(position)).removeValue();
+                keyList.remove(position);
+                Toast.makeText(getApplicationContext(),"Deleted Successfully!!!",Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
     public void browseImages(View view){

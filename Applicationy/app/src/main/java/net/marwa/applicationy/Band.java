@@ -17,13 +17,14 @@ public class Band {
     public Band() {
     }
     public String getFirst(){ return first;}
+    public int getLast() {
+        return last;
+    }
     public double getPrice()
     {
         return price;
     }
 
-    public int getLast() {
-        return last;
-    }
+
 
 }
