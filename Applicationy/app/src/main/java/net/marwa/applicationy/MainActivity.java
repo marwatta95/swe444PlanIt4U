@@ -86,11 +86,11 @@ firebaseAuth.createUserWithEmailAndPassword(email,password)
                if(task.isSuccessful()){
 
                        finish();
-                       startActivity(new Intent(getApplicationContext(), activity_profile.class));
+                       startActivity(new Intent(getApplicationContext(), UserHomeActivity.class));
                    }
 
                else{
-                   Toast.makeText(MainActivity.this, "Could not register. please try again", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, "Could not register. please try again"+task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
                }
 progressDialog.dismiss();

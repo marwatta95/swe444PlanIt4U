@@ -86,13 +86,23 @@ private ProgressDialog progressDialog;
                              if ((editTextEmail.getText().toString()).equals("marwatta95@gmail.com")) {
                                  finish();
                                  startActivity(new Intent(getApplicationContext(), AdminActivity.class));
+
+
                              }
                              else{
                              finish();
-                             startActivity(new Intent(getApplicationContext(), UserActivity.class));
-                         }                         }
+                             startActivity(new Intent(getApplicationContext(), UserHomeActivity.class));
+
+                         }
+                         }
+                         else{
+                             Toast.makeText(LoginActivity.this, "Could not login "+task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+                         }
+
                     }
                 });
+
     }
 
 

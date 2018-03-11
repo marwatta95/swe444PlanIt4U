@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.MenuPopupWindow;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
@@ -191,7 +192,7 @@ public class FoodActivity extends AppCompatActivity {
 
     public void uploadData(View view){
 
-        if(imageUri != null ){
+        if(imageUri != null &&  !(TextUtils.isEmpty(editTextPrice2.getText().toString()))){
             // insert data
 
             final ProgressDialog progressDialog = new ProgressDialog(this);

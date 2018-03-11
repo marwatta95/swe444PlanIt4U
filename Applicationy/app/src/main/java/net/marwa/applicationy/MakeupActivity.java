@@ -169,7 +169,7 @@ public class MakeupActivity extends AppCompatActivity {
 
         else {
             // show message
-            Toast.makeText(getApplicationContext(),"All information are necessary",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"All Fields are required!!",Toast.LENGTH_LONG).show();
         }
 
     }

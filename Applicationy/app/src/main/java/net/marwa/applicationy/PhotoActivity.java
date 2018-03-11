@@ -147,7 +147,7 @@ public class PhotoActivity extends AppCompatActivity {
 
     public void uploadData(View view){
 
-        if(!(TextUtils.isEmpty(editTextFirst3.getText().toString())) )
+        if(!(TextUtils.isEmpty(editTextFirst3.getText().toString()))&&!(TextUtils.isEmpty(editTextPhone3.getText().toString())) &&!(TextUtils.isEmpty(editTextLast3.getText().toString()))&&!(TextUtils.isEmpty(editTextPrice3.getText().toString())))
         {
             // insert data
 
@@ -173,7 +173,7 @@ public class PhotoActivity extends AppCompatActivity {
 
      else {
             // show message
-            Toast.makeText(getApplicationContext(),"Please select data first",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"All fields are required!!",Toast.LENGTH_LONG).show();
         }
 
     }
