@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.MainActivity"
-    android:background="@drawable/two"
-    >
+    android:background="#e6e6ff">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,10 +21,12 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WELCOME BACK"
             android:layout_gravity="center_horizontal"
+            android:text="WELCOME BACK"
 
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
 
 
@@ -55,11 +56,13 @@
             android:id="@+id/buttonSignin"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
 
+            android:background="@color/colorPrimary"
             android:text="LOG IN"
-            />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
 
         <TextView

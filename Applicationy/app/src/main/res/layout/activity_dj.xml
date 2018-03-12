@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.DjActivity"
-    android:background="@drawable/two"
-    >
-
+    android:background="#e6e6ff">
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="parent"
@@ -20,12 +18,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <TextView
             android:id="@+id/textViewUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="The DJs you have just click to delete"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="The DJs you have.\nJust click to delete!"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <ScrollView
@@ -39,13 +40,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></ListView>
         </ScrollView>
+
         <Button
             android:id="@+id/add4"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
-            android:text="ADD DJ" />
+            android:text="ADD DJ"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextFirstName4"
@@ -72,23 +76,29 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number "
             android:inputType="number" />
+
         <Button
             android:id="@+id/addNew4"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
-            android:text="ADD the new DJ" />
+            android:text="ADD the new DJ"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
+
             android:background="@color/colorPrimary"
 
-            android:layout_gravity="center_horizontal"
-
-            android:text="Logout" />
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
 
 

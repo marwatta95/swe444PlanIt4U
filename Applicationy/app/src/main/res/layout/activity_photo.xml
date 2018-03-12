@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.PhotoActivity"
-    android:background="@drawable/two"
-    >
-
+    android:background="#e6e6ff">
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="parent"
@@ -24,7 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="The Photographers you have just click to delete"
+            android:text="The Photographers you have.\nJust click to delete!"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 
@@ -39,13 +39,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></ListView>
         </ScrollView>
+
         <Button
             android:id="@+id/add3"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
-            android:text="ADD Photographer" />
+            android:text="ADD Photographer"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextFirstName3"
@@ -72,23 +75,29 @@
             android:layout_height="wrap_content"
             android:hint="Phone Number "
             android:inputType="number" />
+
         <Button
             android:id="@+id/addNew3"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
-            android:text="ADD the new photographer" />
+            android:text="ADD the new photographer"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
         <Button
-                android:id="@+id/buttonLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-                android:background="@color/colorPrimary"
 
-                android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimary"
 
-                android:text="Logout" />
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
 
 

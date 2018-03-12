@@ -5,26 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.FoodActivity"
-    android:background="@drawable/two"
-    >
+    android:background="#e6e6ff">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/textViewUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="The Food you have just click to delete"
+            android:text="The Food you have.\nJust click to delete!"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 
@@ -39,13 +45,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></ListView>
         </ScrollView>
+
         <Button
             android:id="@+id/add2"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
-            android:text="ADD Food" />
+            android:text="ADD Food"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
 
 
@@ -62,9 +71,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Upload Image"
             android:onClick="browseImages"
-            />
+            android:text="Upload Image"
+
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/insertImages2"
             android:layout_width="match_parent"
@@ -98,23 +108,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cake" />
+
             <Button
                 android:id="@+id/addNew2"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:onClick="uploadData"
-                android:text="ADD the new Food" />
+                android:text="ADD the new Food"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/buttonLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
+                android:text="Logout"
 
-                android:layout_gravity="center_horizontal"
-
-                android:text="Logout" />
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
 
         </RadioGroup>
@@ -122,8 +137,7 @@
 
 
     </LinearLayout>
-
-
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
 
 

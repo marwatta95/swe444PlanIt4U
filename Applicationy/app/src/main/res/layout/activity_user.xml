@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="net.marwa.applicationy.UserActivity">
+    tools:context="net.marwa.applicationy.UserActivity"
+    android:background="#e6e6ff">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,12 +14,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="User"/>
+
         <Button
             android:id="@+id/buttonLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Logout" />
+            android:background="@color/colorPrimary"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
 

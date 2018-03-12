@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.HallActivity"
-    android:background="@drawable/two"
-    >
-
-
+    android:background="#e6e6ff">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
@@ -25,7 +27,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="The Halls you have just click to delete"
+                android:text="The Halls you have.\nJust click to delete!"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <ScrollView
@@ -34,18 +38,22 @@
                 android:layout_weight="1"
                 android:fillViewport="true">
 
-            <ListView
-                android:id="@+id/list1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></ListView>
+                <ListView
+                    android:id="@+id/list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
             </ScrollView>
+
             <Button
                 android:id="@+id/add"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif"
                 android:onClick="uploadData"
-                android:text="ADD Hall" />
+                android:text="ADD Hall"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextName"
@@ -84,9 +92,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Upload Image"
                 android:onClick="browseImages"
-                />
+                android:text="Upload Image"
+                android:textStyle="bold" />
             <ImageView
                 android:id="@+id/insertImages"
                 android:layout_width="match_parent"
@@ -99,22 +107,27 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:onClick="uploadData"
-                android:text="ADD the new hall" />
+                android:text="ADD the new hall"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/buttonLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
+
                 android:background="@color/colorPrimary"
 
-                android:layout_gravity="center_horizontal"
-
-                android:text="Logout" />
+                android:text="Logout"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
 
 
         </LinearLayout>
 
-
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
 

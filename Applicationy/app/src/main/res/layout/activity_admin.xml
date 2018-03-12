@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.AdminActivity"
-    android:background="@drawable/two">
+    android:background="#e6e6ff">
 
 
     <LinearLayout
@@ -39,7 +39,7 @@
 
 
                     android:text="Hello Admin!"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="34sp" />
 
 
@@ -56,10 +56,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/hall" />
 
@@ -70,10 +70,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/decoration" />
                 </LinearLayout>
@@ -91,10 +91,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/food" />
 
@@ -105,10 +105,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/photographer" />
 
@@ -127,10 +127,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/dj" />
 
@@ -141,10 +141,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/band" />
                 </LinearLayout>
@@ -162,10 +162,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/singer" />
 
@@ -176,10 +176,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/hair" />
                 </LinearLayout>
@@ -197,10 +197,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/makeup" />
 
@@ -211,10 +211,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/clown" />
                 </LinearLayout>
@@ -232,10 +232,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/invitation" />
 
@@ -246,10 +246,10 @@
                         android:layout_marginBottom="5sp"
                         android:layout_marginLeft="2sp"
                         android:layout_marginRight="5sp"
-                        android:layout_marginTop="0sp"
+                        android:layout_marginTop="10sp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
-                        android:padding="0dp"
+                        android:padding="5dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/custom" />
                 </LinearLayout>
@@ -277,10 +277,12 @@
             android:layout_height="wrap_content"
 
             android:layout_gravity="center_horizontal"
-            android:fontFamily="serif"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif"
             android:text="Logout"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
 
