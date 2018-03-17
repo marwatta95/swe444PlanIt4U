@@ -14,6 +14,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -59,13 +60,13 @@ public class HallActivity extends AppCompatActivity {
     private EditText editTextName,editTextDes,editTextAddress,editTextPrice,editTextCapacity;
     private Button addNew;
     private Button add;
-
+    private Spinner spinner;
     private Button upload;
 
     public static final String STORAGE_PATH = "HallsImages/";
     public static final String DATABASE_PATH = "Halls";
     private Uri imageUri;
-
+private TextView textLocation;
     private StorageReference storageReference;
 
     private Uri filePath;
@@ -78,10 +79,17 @@ public class HallActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hall);
         firebaseAuth = FirebaseAuth.getInstance();
+        spinner = (Spinner) findViewById(R.id.street);
 
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.street, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setVisibility(View.GONE );
         listView = (ListView) findViewById(R.id.list1);
         imageView = (ImageView) findViewById(R.id.insertImages);
         imageView.setVisibility(View.GONE);
+        textLocation=(TextView) findViewById( R.id.textLocation);textLocation.setVisibility( View.GONE );
         editTextName = (EditText) findViewById(R.id.editTextName);editTextName.setVisibility(View.GONE);
         editTextDes = (EditText) findViewById(R.id.editTextDes);editTextDes.setVisibility(View.GONE);
         editTextAddress= (EditText) findViewById(R.id.editTextAddress);editTextAddress.setVisibility(View.GONE);
@@ -117,6 +125,8 @@ public class HallActivity extends AppCompatActivity {
                 editTextPrice.setVisibility(View.VISIBLE);
                 editTextCapacity.setVisibility(View.VISIBLE);
                 upload.setVisibility(View.VISIBLE);
+                spinner.setVisibility(View.VISIBLE );
+                textLocation.setVisibility(View.VISIBLE );
             }
         });
 
@@ -219,10 +229,10 @@ public class HallActivity extends AppCompatActivity {
                     double priceDouble=Double.parseDouble(price);
                     String capacity = editTextCapacity.getText().toString();
                     int capacityint=Integer.parseInt(capacity);
+                    String location = spinner.getSelectedItem().toString();
 
 
-
-                    Hall hall = new Hall(NAME,des,address,capacityint,priceDouble, taskSnapshot.getDownloadUrl().toString());
+                    Hall hall = new Hall(NAME,des,address,capacityint,priceDouble, taskSnapshot.getDownloadUrl().toString(),location);
 
                     String id = databaseReference.push().getKey();
 

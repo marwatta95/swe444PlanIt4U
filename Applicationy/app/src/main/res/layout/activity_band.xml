@@ -8,17 +8,25 @@
     android:background="#e6e6ff"
     >
 
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints">
 
     <LinearLayout
-        android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="88dp"
+        tools:ignore="MissingConstraints">
 
 
         <TextView
@@ -48,6 +56,7 @@
             android:id="@+id/add8"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:fontFamily="sans-serif"
             android:onClick="uploadData"
@@ -85,6 +94,7 @@
             android:id="@+id/addNew8"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:fontFamily="sans-serif"
             android:onClick="uploadData"
@@ -110,6 +120,7 @@
 
 
     </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

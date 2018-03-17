@@ -1,9 +1,17 @@
 <resources>
     <string name="app_name">Applicationy</string>
-    <string name="title_activity_user_home">UserHomeActivity</string>
+    <string name="title_activity_user_home">PlanIt4U</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_user_first">PlanIt4U</string>
+    <string-array name="street">
+        <item>East of Riyadh</item>
+        <item>West of Riyadh</item>
+        <item>North of Riyadh</item>
+        <item>South of Riyadh</item>
+
+    </string-array>
 </resources>

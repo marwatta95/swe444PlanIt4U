@@ -8,10 +8,14 @@
     android:background="#e6e6ff">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/linearLayout11"
@@ -51,6 +55,7 @@
                 android:id="@+id/add10"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:background="@color/colorPrimary"
                 android:onClick="uploadData"
                 android:text="ADD Custom"
@@ -103,11 +108,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Graduatin" />
+            </RadioGroup>
 
                 <Button
                     android:id="@+id/addNew10"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
                     android:background="@color/colorPrimary"
                     android:onClick="uploadData"
                     android:text="ADD the new custom"
@@ -128,7 +136,7 @@
                     android:textStyle="bold" />
 
 
-            </RadioGroup>
+
 
 
         </LinearLayout>

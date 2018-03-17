@@ -244,7 +244,7 @@ public class FoodActivity extends AppCompatActivity {
 
         } else {
             // show message
-            Toast.makeText(getApplicationContext(),"Please select data first",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"All fields are required!!",Toast.LENGTH_LONG).show();
         }
 
     }

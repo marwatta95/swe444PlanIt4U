@@ -6,18 +6,28 @@
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.HairActivity"
     android:background="#e6e6ff">
-
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints">
 
     <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout11"
+        android:layout_width="380dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+
         <TextView
             android:id="@+id/textViewUserEmail"
             android:layout_width="wrap_content"
@@ -45,6 +55,7 @@
             android:id="@+id/add6"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
             android:text="ADD Hair dresser"
@@ -81,6 +92,7 @@
             android:id="@+id/addNew6"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
             android:text="ADD the new Hair dresser"
@@ -106,6 +118,7 @@
 
 
     </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

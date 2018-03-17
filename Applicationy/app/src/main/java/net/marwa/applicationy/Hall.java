@@ -1,5 +1,7 @@
 package net.marwa.applicationy;
 
+import java.util.LinkedList;
+
 /**
  * Created by samar fares on 3/2/2018.
  */
@@ -8,10 +10,13 @@ public class Hall {
     String name,description,address;
     int capacity;double price;
     String imageUri;
+    LinkedList<String> dates=new LinkedList<String>();
+    String location;
 
-    public Hall(String name, String description,String address,int capacity,double price, String imageUri) {
+    public Hall(String name, String description,String address,int capacity,double price, String imageUri,String location) {
         this.name = name;this.description = description;this.address=address;this.capacity=capacity;this.price=price;
-        this.imageUri = imageUri;
+        this.imageUri = imageUri;this.location=location;
+
     }
 
     public Hall() {

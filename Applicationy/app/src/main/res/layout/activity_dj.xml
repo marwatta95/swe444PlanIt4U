@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.DjActivity"
     android:background="#e6e6ff">
-
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints">
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
@@ -45,6 +53,7 @@
             android:id="@+id/add4"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
             android:text="ADD DJ"
@@ -81,6 +90,7 @@
             android:id="@+id/addNew4"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
             android:text="ADD the new DJ"
@@ -106,7 +116,7 @@
 
 
     </LinearLayout>
-
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
 

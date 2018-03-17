@@ -42,7 +42,7 @@ public class activity_profile extends AppCompatActivity implements View.OnClickL
         }
 
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
-        buttonLogout.setVisibility(View.GONE);
+
         databaseReference= FirebaseDatabase.getInstance().getReference();
         editTextAddress=(EditText) findViewById(R.id.editTextAddress);
         editTextFirst=(EditText) findViewById(R.id.editTextFirstName);
@@ -85,13 +85,12 @@ public class activity_profile extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
 if(view == buttonLogout){
 
-    firebaseAuth.signOut();
-    finish();
-    startActivity(new Intent(this, LoginActivity.class));
+
+    startActivity(new Intent(this, UserHomeActivity.class));
 }
 if (view == buttonSave){
     saveUserInformation();
-    buttonLogout.setVisibility(View.VISIBLE);
+    startActivity(new Intent(this, UserHomeActivity.class));
 
 }
     }

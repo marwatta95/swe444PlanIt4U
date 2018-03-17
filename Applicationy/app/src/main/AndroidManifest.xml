@@ -25,7 +25,6 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".activity_profile" />
-        <activity android:name=".UserActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".HallActivity" />
         <activity android:name=".DecorActivity" />
@@ -42,7 +41,12 @@
         <activity
             android:name=".UserHomeActivity"
             android:label="@string/title_activity_user_home"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UserFirstActivity"
+            android:label="@string/title_activity_user_first"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ChooseHallActivity"></activity>
     </application>
 
 </manifest>

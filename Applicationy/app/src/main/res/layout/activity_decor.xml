@@ -8,21 +8,25 @@
     android:background="#e6e6ff">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="83dp"
+        tools:ignore="MissingConstraints">
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textViewUserEmail"
@@ -51,6 +55,7 @@
             android:id="@+id/add1"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:onClick="uploadData"
             android:text="ADD Decoration"
@@ -103,11 +108,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Graduation" />
+        </RadioGroup>
 
             <Button
                 android:id="@+id/addNew1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:background="@color/colorPrimary"
                 android:onClick="uploadData"
                 android:text="ADD the new Decoration"
@@ -120,15 +127,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-
                 android:background="@color/colorPrimary"
-
                 android:text="Logout"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
 
-        </RadioGroup>
+
 
 
 
