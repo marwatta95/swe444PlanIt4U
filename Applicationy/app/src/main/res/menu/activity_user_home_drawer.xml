@@ -7,25 +7,21 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="My parties" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Notifications" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Edit Profile" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/logouticon"
+            android:title="Log out" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
 
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Log out" />
-        </menu>
-    </item>
 
 </menu>

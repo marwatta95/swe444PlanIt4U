@@ -14,4 +14,8 @@
         <item>South of Riyadh</item>
 
     </string-array>
+    <string name="title_activity_choose_hall">Choose Hall</string>
+    <string name="title_activity_choose_decoration">Choose Decoration</string>
+    <string name="title_activity_choose_food">Choose Food</string>
+    <string name="title_activity_choose_photo">Choose Photographer</string>
 </resources>

@@ -1,8 +1,11 @@
 package net.marwa.applicationy;
 
 
+import java.util.LinkedList;
+
 public class Photographer {
     String first,last,phone;
+    LinkedList<String> dates=new LinkedList<String>();
     double price;
 
     public Photographer(String first,String last, String phone,double price) {
@@ -25,7 +28,7 @@ public class Photographer {
         return last;
     }
 
-    public String getPhone(String imageUri) {
+    public String getPhone() {
         return phone;
     }
 }

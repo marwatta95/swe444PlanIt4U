@@ -46,7 +46,22 @@
             android:name=".UserFirstActivity"
             android:label="@string/title_activity_user_first"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ChooseHallActivity"></activity>
+        <activity
+            android:name=".ChooseHallActivity"
+            android:label="@string/title_activity_choose_hall"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChooseDecorationActivity"
+            android:label="@string/title_activity_choose_decoration"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChooseFoodActivity"
+            android:label="@string/title_activity_choose_food"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChoosePhotoActivity"
+            android:label="@string/title_activity_choose_photo"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,13 @@
 package net.marwa.applicationy;
 
 
+import java.util.LinkedList;
+
 public class Band {
     String first,phone;
     int last;
     double price;
+    LinkedList<String> dates=new LinkedList<String>();
 
     public Band(String first,int last, String phone,double price) {
         this.first=first;

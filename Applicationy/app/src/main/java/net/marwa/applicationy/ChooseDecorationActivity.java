@@ -25,20 +25,20 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChooseHallActivity extends AppCompatActivity {
+public class ChooseDecorationActivity extends AppCompatActivity {
     ListView listView;
 
-    List<Hall> list;
+    List<Decor> list;
     ProgressDialog progressDialog;
     final ArrayList<String> keyList = new ArrayList<>();
     private DatabaseReference databaseReference;
-    public static final String DATABASE_PATH = "Halls";
-    MyAdapterChooseHall myAdapter;
+    public static final String DATABASE_PATH = "Decoration";
+    MyAdapterChooseDecor myAdapter;
     private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_choose_hall2 );
+        setContentView( R.layout.activity_choose_decoration );
         Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         listView=(ListView) findViewById( R.id.list1);
@@ -49,6 +49,7 @@ public class ChooseHallActivity extends AppCompatActivity {
         final String date = intent.getExtras().getString( "date" );
         final String guests = intent.getExtras().getString( "guests" );
         final String location = intent.getExtras().getString( "location" );
+        final String hall = intent.getExtras().getString( "hall" );
 
 
         list = new ArrayList<>();
@@ -56,7 +57,7 @@ public class ChooseHallActivity extends AppCompatActivity {
         progressDialog.setTitle("Please wait");
         progressDialog.show();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference(HallActivity.DATABASE_PATH);
+        databaseReference = FirebaseDatabase.getInstance().getReference(DecorActivity.DATABASE_PATH);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,16 +68,12 @@ public class ChooseHallActivity extends AppCompatActivity {
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
                     keyList.add(snap.getKey());
 
-                    Hall hall = snap.getValue(Hall.class);
-              // if(location.equals( hall.location )) {
-                    int guest = Integer.parseInt( guests );
-                    if ((hall.capacity >= guest) && (hall.capacity <= guest + 50)) {
-                        if (!hall.dates.contains( date ))
-                            list.add( hall );
-
+                    Decor decor = snap.getValue(Decor.class);
+                    if(type.equals( decor.type )){
+                        list.add(decor);
+                    }
                 }
-                }
-                myAdapter = new MyAdapterChooseHall(ChooseHallActivity.this,R.layout.data_items_choose_hall,list);
+                myAdapter = new MyAdapterChooseDecor(ChooseDecorationActivity.this,R.layout.data_items_choose_decor,list);
                 listView.setAdapter(myAdapter);
 
             }
@@ -102,23 +99,24 @@ public class ChooseHallActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-              final  Intent intent=new Intent(ChooseHallActivity.this, ChooseDecorationActivity.class);
+                final  Intent intent=new Intent(ChooseDecorationActivity.this, ChooseFoodActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );
                 intent.putExtra( "location", location );
+                intent.putExtra( "hall", hall );
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(
-                                ChooseHallActivity.this );
+                                ChooseDecorationActivity.this );
                         alert.setTitle( "Confirm" );
-                        alert.setMessage( "Are you sure you want this hall? " );
+                        alert.setMessage( "Are you sure you want this Decoration? " );
                         alert.setPositiveButton( "YES", new DialogInterface.OnClickListener() {
 
-                               @Override
+                            @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                intent.putExtra( "hall", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
+                                intent.putExtra( "decor", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
                                 Toast.makeText( getApplicationContext(), "Chosen Successfully!!!", Toast.LENGTH_LONG ).show();
                                 dialog.dismiss();
 

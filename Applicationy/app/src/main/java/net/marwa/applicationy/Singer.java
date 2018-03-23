@@ -1,15 +1,19 @@
 package net.marwa.applicationy;
 
 
+import java.util.LinkedList;
+
 public class Singer {
     String first,last,phone;
     double price;
+    LinkedList<String> dates=new LinkedList<String>();
 
     public Singer(String first,String last, String phone,double price) {
         this.first=first;
         this.last=last;
         this.phone = phone;
         this.price=price;
+
 
     }
 

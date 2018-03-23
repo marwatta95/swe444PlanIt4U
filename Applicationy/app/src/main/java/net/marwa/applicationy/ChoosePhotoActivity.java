@@ -25,20 +25,20 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChooseHallActivity extends AppCompatActivity {
+public class ChoosePhotoActivity extends AppCompatActivity {
     ListView listView;
-
-    List<Hall> list;
+    List<Photographer> list;
     ProgressDialog progressDialog;
     final ArrayList<String> keyList = new ArrayList<>();
     private DatabaseReference databaseReference;
-    public static final String DATABASE_PATH = "Halls";
-    MyAdapterChooseHall myAdapter;
+    public static final String DATABASE_PATH = "Photographer";
+    MyAdapterChoosePhoto myAdapter;
+
     private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_choose_hall2 );
+        setContentView( R.layout.activity_choose_photo);
         Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         listView=(ListView) findViewById( R.id.list1);
@@ -49,14 +49,20 @@ public class ChooseHallActivity extends AppCompatActivity {
         final String date = intent.getExtras().getString( "date" );
         final String guests = intent.getExtras().getString( "guests" );
         final String location = intent.getExtras().getString( "location" );
-
+        final String hall = intent.getExtras().getString( "hall" );
+        final String decor = intent.getExtras().getString( "decor" );
+        final String appetizer = intent.getExtras().getString( "appetizer" );
+        final String main = intent.getExtras().getString( "main" );
+        final String dessert = intent.getExtras().getString( "dessert" );
+        final String cake = intent.getExtras().getString( "cake" );
 
         list = new ArrayList<>();
+
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please wait");
         progressDialog.show();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference(HallActivity.DATABASE_PATH);
+        databaseReference = FirebaseDatabase.getInstance().getReference(DecorActivity.DATABASE_PATH);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,17 +73,16 @@ public class ChooseHallActivity extends AppCompatActivity {
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
                     keyList.add(snap.getKey());
 
-                    Hall hall = snap.getValue(Hall.class);
-              // if(location.equals( hall.location )) {
-                    int guest = Integer.parseInt( guests );
-                    if ((hall.capacity >= guest) && (hall.capacity <= guest + 50)) {
-                        if (!hall.dates.contains( date ))
-                            list.add( hall );
+                    Photographer photographer = snap.getValue(Photographer.class);
+                    if(!photographer.dates.contains(date)){
+                        list.add(photographer);
+                    }
+
 
                 }
-                }
-                myAdapter = new MyAdapterChooseHall(ChooseHallActivity.this,R.layout.data_items_choose_hall,list);
+                myAdapter = new MyAdapterChoosePhoto(ChoosePhotoActivity.this,R.layout.data_items_choose_photo,list);
                 listView.setAdapter(myAdapter);
+
 
             }
 
@@ -102,23 +107,30 @@ public class ChooseHallActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-              final  Intent intent=new Intent(ChooseHallActivity.this, ChooseDecorationActivity.class);
+                final  Intent intent=new Intent(ChoosePhotoActivity.this, ChoosePhotoActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );
                 intent.putExtra( "location", location );
+                intent.putExtra( "hall", hall );
+                intent.putExtra( "decor", decor );
+                intent.putExtra( "appetizer", appetizer );
+                intent.putExtra( "main", main );
+                intent.putExtra( "dessert", dessert );
+                intent.putExtra( "cake", cake );
+
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(
-                                ChooseHallActivity.this );
+                                ChoosePhotoActivity.this );
                         alert.setTitle( "Confirm" );
-                        alert.setMessage( "Are you sure you want this hall? " );
+                        alert.setMessage( "Are you sure you want this? " );
                         alert.setPositiveButton( "YES", new DialogInterface.OnClickListener() {
 
-                               @Override
+                            @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                intent.putExtra( "hall", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
+                                intent.putExtra( "photographer", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
                                 Toast.makeText( getApplicationContext(), "Chosen Successfully!!!", Toast.LENGTH_LONG ).show();
                                 dialog.dismiss();
 
@@ -137,6 +149,10 @@ public class ChooseHallActivity extends AppCompatActivity {
 
                     }
                 });
+
+
+
+
                 startActivity(intent);
 
 
