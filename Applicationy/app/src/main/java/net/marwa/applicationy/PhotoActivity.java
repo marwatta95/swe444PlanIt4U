@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -46,6 +48,9 @@ public class PhotoActivity extends AppCompatActivity {
     private Button addNew3;
     private Button add3;
     private Button upload3;
+    private RadioGroup radioSexGroup;
+    private RadioButton radioSexButton;
+
 
     public static final String DATABASE_PATH = "Photographer";
     private Uri imageUri;
@@ -68,6 +73,7 @@ public class PhotoActivity extends AppCompatActivity {
         editTextFirst3= (EditText) findViewById(R.id.editTextFirstName3);editTextFirst3.setVisibility(View.GONE);
         editTextLast3= (EditText) findViewById(R.id.editTextLastName3);editTextLast3.setVisibility(View.GONE);
         editTextPhone3= (EditText) findViewById(R.id.editTextPhone3);editTextPhone3.setVisibility(View.GONE);
+        radioSexGroup=(RadioGroup) findViewById(R.id.radioSex);radioSexGroup.setVisibility( View.GONE );
 
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
@@ -95,6 +101,7 @@ public class PhotoActivity extends AppCompatActivity {
                 editTextLast3.setVisibility(View.VISIBLE);
                 editTextFirst3.setVisibility(View.VISIBLE);
                 editTextPhone3.setVisibility(View.VISIBLE);
+                radioSexGroup.setVisibility( View.VISIBLE );
 
             }
         });
@@ -160,8 +167,12 @@ public class PhotoActivity extends AppCompatActivity {
             String last = editTextLast3.getText().toString();
             String phone = editTextPhone3.getText().toString();
             double priceDouble=Double.parseDouble(price);
+            int selectedId = radioSexGroup.getCheckedRadioButtonId();
 
-            Photographer photog = new Photographer(first,last,phone,priceDouble);
+            radioSexButton = (RadioButton) findViewById(selectedId);
+
+            String gender= radioSexButton.getText().toString();
+            Photographer photog = new Photographer(first,last,phone,priceDouble,gender);
 
                     String id = databaseReference.push().getKey();
 

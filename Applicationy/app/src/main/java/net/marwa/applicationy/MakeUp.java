@@ -1,9 +1,12 @@
 package net.marwa.applicationy;
 
 
+import java.util.LinkedList;
+
 public class MakeUp {
     String first,last,phone;
     double price;
+    LinkedList<String> dates=new LinkedList<String>();
 
     public MakeUp(String first,String last, String phone,double price) {
         this.first=first;
@@ -24,5 +27,7 @@ public class MakeUp {
     public String getLast() {
         return last;
     }
-
+    public String getPhone() {
+        return phone;
+    }
 }

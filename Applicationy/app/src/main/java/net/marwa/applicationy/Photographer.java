@@ -7,12 +7,14 @@ public class Photographer {
     String first,last,phone;
     LinkedList<String> dates=new LinkedList<String>();
     double price;
+    String gender;
 
-    public Photographer(String first,String last, String phone,double price) {
+    public Photographer(String first,String last, String phone,double price,String gender) {
         this.first=first;
         this.last=last;
         this.phone = phone;
         this.price=price;
+        this.gender=gender;
 
     }
 
@@ -23,7 +25,7 @@ public class Photographer {
     {
         return price;
     }
-
+    public String getGender(){return gender;}
     public String getLast() {
         return last;
     }

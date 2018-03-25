@@ -23,6 +23,7 @@ public class Band {
     public int getLast() {
         return last;
     }
+    public String getPhone(){return phone;}
     public double getPrice()
     {
         return price;

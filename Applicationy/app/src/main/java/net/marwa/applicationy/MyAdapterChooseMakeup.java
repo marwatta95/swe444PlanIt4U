@@ -7,20 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class MyAdapterChoosePhoto extends ArrayAdapter<Photographer> {
 
+
+public class MyAdapterChooseMakeup extends ArrayAdapter<MakeUp> {
     Activity activity;
     int resource;
-    List<Photographer> list;
+    List<MakeUp> list;
 
-    public MyAdapterChoosePhoto (Activity activity, int resource, List<Photographer> list) {
+    public MyAdapterChooseMakeup (Activity activity, int resource, List<MakeUp> list) {
         super(activity, resource,list);
         this.activity = activity;
         this.resource = resource;
@@ -35,10 +33,10 @@ public class MyAdapterChoosePhoto extends ArrayAdapter<Photographer> {
 
         View view = layoutInflater.inflate(resource,null);
 
-        TextView first = (TextView) view.findViewById(R.id.first);
+        TextView first = (TextView) view.findViewById(R.id.getFirst);
         String firstn=list.get(position).getFirst();
         first.setText( firstn );
-        TextView last = (TextView) view.findViewById(R.id.last);
+        TextView last = (TextView) view.findViewById(R.id.getLast);
         String lastn=list.get(position).getLast();
         last.setText( lastn );
         TextView phone = (TextView) view.findViewById(R.id.getPhone);
@@ -47,10 +45,6 @@ public class MyAdapterChoosePhoto extends ArrayAdapter<Photographer> {
         TextView price = (TextView) view.findViewById(R.id.getPrice);
         String str = Double.toString(list.get(position).getPrice());
         price.setText(str);
-
-        TextView gen = (TextView) view.findViewById(R.id.getGender);
-        String gender=list.get(position).getGender();
-        gen.setText( gender );
 
 
 

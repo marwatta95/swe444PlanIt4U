@@ -23,7 +23,7 @@ public class Dj {
     {
         return price;
     }
-
+public String getPhone(){return phone;}
     public String getLast() {
         return last;
     }

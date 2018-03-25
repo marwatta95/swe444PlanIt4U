@@ -67,7 +67,7 @@ public class ChooseFoodActivity extends AppCompatActivity {
         progressDialog.setTitle("Please wait");
         progressDialog.show();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference(DecorActivity.DATABASE_PATH);
+        databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

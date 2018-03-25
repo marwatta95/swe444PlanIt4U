@@ -24,5 +24,8 @@ public class Hair {
     public String getLast() {
         return last;
     }
+    public String getPhone() {
+        return phone;
+    }
 
 }

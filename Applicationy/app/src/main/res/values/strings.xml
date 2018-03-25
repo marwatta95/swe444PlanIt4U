@@ -18,4 +18,10 @@
     <string name="title_activity_choose_decoration">Choose Decoration</string>
     <string name="title_activity_choose_food">Choose Food</string>
     <string name="title_activity_choose_photo">Choose Photographer</string>
+    <string name="title_activity_choose_music">Choose Music</string>
+    <string name="title_activity_choose_dj">Choose Dj</string>
+    <string name="title_activity_choose_band">Choose Band</string>
+    <string name="title_activity_choose_singer">Choose Singer</string>
+    <string name="title_activity_choose_makeup">Choose Makeup</string>
+    <string name="title_activity_choose_hair">ChooseHairActivity</string>
 </resources>

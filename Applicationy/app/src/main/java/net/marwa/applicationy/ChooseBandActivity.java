@@ -25,20 +25,19 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChoosePhotoActivity extends AppCompatActivity {
+public class ChooseBandActivity extends AppCompatActivity {
     ListView listView;
-    List<Photographer> list;
+    List<Band> list;
     ProgressDialog progressDialog;
     final ArrayList<String> keyList = new ArrayList<>();
     private DatabaseReference databaseReference;
-    public static final String DATABASE_PATH = "Photographer";
-    MyAdapterChoosePhoto myAdapter;
+    MyAdapterChooseBand myAdapter;
 
     private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_choose_photo);
+        setContentView( R.layout.activity_choose_band);
         Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         listView=(ListView) findViewById( R.id.list1);
@@ -55,6 +54,8 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         final String main = intent.getExtras().getString( "main" );
         final String dessert = intent.getExtras().getString( "dessert" );
         final String cake = intent.getExtras().getString( "cake" );
+        final String photographer = intent.getExtras().getString( "photographer" );
+
 
         list = new ArrayList<>();
 
@@ -62,7 +63,7 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         progressDialog.setTitle("Please wait");
         progressDialog.show();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
+        databaseReference = FirebaseDatabase.getInstance().getReference(BandActivity.DATABASE_PATH);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -73,14 +74,14 @@ public class ChoosePhotoActivity extends AppCompatActivity {
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
                     keyList.add(snap.getKey());
 
-                    Photographer photographer = snap.getValue(Photographer.class);
-                    if(!photographer.dates.contains(date)){
-                        list.add(photographer);
+                   Band band = snap.getValue(Band.class);
+                    if(!band.dates.contains(date)){
+                        list.add(band);
                     }
 
 
                 }
-                myAdapter = new MyAdapterChoosePhoto(ChoosePhotoActivity.this,R.layout.data_items_choose_photo,list);
+                myAdapter = new MyAdapterChooseBand(ChooseBandActivity.this,R.layout.data_items_choose_band,list);
                 listView.setAdapter(myAdapter);
 
 
@@ -107,7 +108,7 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final  Intent intent=new Intent(ChoosePhotoActivity.this, ChooseMusicActivity.class);
+                final  Intent intent=new Intent(ChooseBandActivity.this, ChooseMusicActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );
@@ -118,19 +119,21 @@ public class ChoosePhotoActivity extends AppCompatActivity {
                 intent.putExtra( "main", main );
                 intent.putExtra( "dessert", dessert );
                 intent.putExtra( "cake", cake );
+                intent.putExtra( "photographer", photographer );
+
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(
-                                ChoosePhotoActivity.this );
+                                ChooseBandActivity.this );
                         alert.setTitle( "Confirm" );
                         alert.setMessage( "Are you sure you want this? " );
                         alert.setPositiveButton( "YES", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                intent.putExtra( "photographer", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
+                                intent.putExtra( "band", databaseReference.getRoot().child( BandActivity.DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
                                 Toast.makeText( getApplicationContext(), "Chosen Successfully!!!", Toast.LENGTH_LONG ).show();
                                 dialog.dismiss();
 
