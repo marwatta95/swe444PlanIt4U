@@ -23,5 +23,7 @@
     <string name="title_activity_choose_band">Choose Band</string>
     <string name="title_activity_choose_singer">Choose Singer</string>
     <string name="title_activity_choose_makeup">Choose Makeup</string>
-    <string name="title_activity_choose_hair">ChooseHairActivity</string>
+    <string name="title_activity_choose_hair">Choose Hair Dresser</string>
+    <string name="title_activity_choose_clown">Choose Clown</string>
+    <string name="title_activity_choose_custom">Choose Custom</string>
 </resources>

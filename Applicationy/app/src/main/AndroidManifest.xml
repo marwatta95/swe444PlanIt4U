@@ -85,6 +85,14 @@
         <activity
             android:name=".ChooseHairActivity"
             android:label="@string/title_activity_choose_hair"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChooseClownActivity"
+            android:label="@string/title_activity_choose_clown"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChooseCustomActivity"
+            android:label="@string/title_activity_choose_custom"
             android:theme="@style/AppTheme"></activity>
     </application>
 

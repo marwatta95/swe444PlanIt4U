@@ -97,7 +97,7 @@ public class ChooseSingerActivity extends AppCompatActivity {
         fab.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make( view, "Replace with your own action", Snackbar.LENGTH_LONG )
+                Snackbar.make( view, "The only better thing than singing is more singing !!", Snackbar.LENGTH_LONG )
                         .setAction( "Action", null ).show();
             }
         } );
@@ -107,7 +107,7 @@ public class ChooseSingerActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final  Intent intent=new Intent(ChooseSingerActivity.this, ChooseMusicActivity.class);
+                final  Intent intent=new Intent(ChooseSingerActivity.this, ChooseMakeupActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );

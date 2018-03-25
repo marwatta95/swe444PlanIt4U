@@ -90,32 +90,27 @@
             android:datePickerMode="spinner"
             android:spinnersShown="true"
             />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+
 
         <Button
             android:id="@+id/buttonSave"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPrimary"
             android:text="Save"
-            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonLogout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@color/colorPrimary"
             android:text="Cancel"
-            android:textColor="@android:color/white"
             android:textStyle="bold" />
-</LinearLayout>
+
     </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

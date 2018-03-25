@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -25,20 +24,18 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChoosePhotoActivity extends AppCompatActivity {
+public class ChooseClownActivity extends AppCompatActivity {
     ListView listView;
-    List<Photographer> list;
+    List<Clown> list;
     ProgressDialog progressDialog;
     final ArrayList<String> keyList = new ArrayList<>();
     private DatabaseReference databaseReference;
-    public static final String DATABASE_PATH = "Photographer";
-    MyAdapterChoosePhoto myAdapter;
-
+    MyAdapterChooseClown myAdapter;
     private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_choose_photo);
+        setContentView( R.layout.activity_choose_clown);
         Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
         listView=(ListView) findViewById( R.id.list1);
@@ -55,6 +52,14 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         final String main = intent.getExtras().getString( "main" );
         final String dessert = intent.getExtras().getString( "dessert" );
         final String cake = intent.getExtras().getString( "cake" );
+        final String photographer = intent.getExtras().getString( "photographer" );
+        final String singer = intent.getExtras().getString( "singer" );
+        final String dj = intent.getExtras().getString( "dj" );
+        final String band = intent.getExtras().getString( "band" );
+        final String makeup = intent.getExtras().getString( "makeup" );
+        final String hair = intent.getExtras().getString( "hair" );
+
+
 
         list = new ArrayList<>();
 
@@ -62,7 +67,7 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         progressDialog.setTitle("Please wait");
         progressDialog.show();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference(DATABASE_PATH);
+        databaseReference = FirebaseDatabase.getInstance().getReference(ClownActivity.DATABASE_PATH);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -73,14 +78,14 @@ public class ChoosePhotoActivity extends AppCompatActivity {
                 for(DataSnapshot snap : dataSnapshot.getChildren()){
                     keyList.add(snap.getKey());
 
-                    Photographer photographer = snap.getValue(Photographer.class);
-                    if(!photographer.dates.contains(date)){
-                        list.add(photographer);
+                    Clown clown = snap.getValue(Clown.class);
+                    if(!clown.dates.contains(date)){
+                        list.add(clown);
                     }
 
 
                 }
-                myAdapter = new MyAdapterChoosePhoto(ChoosePhotoActivity.this,R.layout.data_items_choose_photo,list);
+                myAdapter = new MyAdapterChooseClown(ChooseClownActivity.this,R.layout.data_items_choose_clown,list);
                 listView.setAdapter(myAdapter);
 
 
@@ -93,21 +98,22 @@ public class ChoosePhotoActivity extends AppCompatActivity {
         });
 
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById( R.id.fab );
         fab.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make( view, "A photograph is the pause buton of life !!", Snackbar.LENGTH_LONG )
+                Snackbar.make( view, "WELL !! you can always be a clown !!", Snackbar.LENGTH_LONG )
                         .setAction( "Action", null ).show();
             }
         } );
-
 
         next=(Button) findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final  Intent intent=new Intent(ChoosePhotoActivity.this, ChooseMusicActivity.class);
+                final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );
@@ -118,19 +124,28 @@ public class ChoosePhotoActivity extends AppCompatActivity {
                 intent.putExtra( "main", main );
                 intent.putExtra( "dessert", dessert );
                 intent.putExtra( "cake", cake );
+                intent.putExtra( "photographer", photographer );
+                intent.putExtra( "singer", singer );
+                intent.putExtra( "dj", dj );
+                intent.putExtra( "band", band );
+                intent.putExtra( "makeup", makeup );
+                intent.putExtra( "hair", hair );
+
+
+
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,final int position, long id) {
                         AlertDialog.Builder alert = new AlertDialog.Builder(
-                                ChoosePhotoActivity.this );
+                                ChooseClownActivity.this );
                         alert.setTitle( "Confirm" );
                         alert.setMessage( "Are you sure you want this? " );
                         alert.setPositiveButton( "YES", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                intent.putExtra( "photographer", databaseReference.getRoot().child( DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
+                                intent.putExtra( "clown", databaseReference.getRoot().child( ClownActivity.DATABASE_PATH ).child( keyList.get( position ) ).getClass().toString() );
                                 Toast.makeText( getApplicationContext(), "Chosen Successfully!!!", Toast.LENGTH_LONG ).show();
                                 dialog.dismiss();
 
@@ -161,4 +176,5 @@ public class ChoosePhotoActivity extends AppCompatActivity {
             }
         });
     }
+
 }

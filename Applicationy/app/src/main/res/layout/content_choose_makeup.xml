@@ -47,28 +47,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></ListView>
         </ScrollView>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="150dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="NEXT" />
 
-            <Button
-                android:id="@+id/clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@color/colorPrimaryDark"
-                android:text="SKIP" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/nexticon"
+            android:text="NEXT" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

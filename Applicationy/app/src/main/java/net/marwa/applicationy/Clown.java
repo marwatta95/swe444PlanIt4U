@@ -1,5 +1,7 @@
 package net.marwa.applicationy;
 
+import java.util.LinkedList;
+
 /**
  * Created by samar fares on 3/2/2018.
  */
@@ -8,6 +10,8 @@ public class Clown {
     String name;
     double price;
     String imageUri;
+    LinkedList<String> dates=new LinkedList<String>();
+
 
     public Clown(String name,double price, String imageUri) {
         this.name = name;this.price=price;
