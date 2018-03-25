@@ -70,7 +70,7 @@ public class ChooseMakeupActivity extends AppCompatActivity {
                     keyList.add(snap.getKey());
 
                     MakeUp makeUp = snap.getValue(MakeUp.class);
-                    if(!makeUpp.dates.contains(date)){
+                    if(!makeUp.dates.contains(date)){
                         list.add(makeUp);
                     }
 
