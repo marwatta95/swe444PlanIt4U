@@ -1,5 +1,6 @@
 package net.marwa.applicationy;
 
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -198,8 +199,10 @@ public class UserHomeActivity extends AppCompatActivity
        if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
+           startActivity(new Intent(this, NotificationActivity.class));
 
-        } else if (id == R.id.nav_manage) {
+
+       } else if (id == R.id.nav_manage) {
            startActivity(new Intent(this, activity_profile.class));
 
        } else if (id == R.id.nav_send) {

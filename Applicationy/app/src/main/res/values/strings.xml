@@ -26,4 +26,5 @@
     <string name="title_activity_choose_hair">Choose Hair Dresser</string>
     <string name="title_activity_choose_clown">Choose Clown</string>
     <string name="title_activity_choose_custom">Choose Custom</string>
+    <string name="title_activity_notification">Notifications</string>
 </resources>

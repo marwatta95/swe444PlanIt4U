@@ -5,13 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.PartyActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
+
+
+
+
 
             <TextView
                 android:id="@+id/textViewHall"
@@ -87,7 +96,9 @@
                 android:layout_height="50dp"
                 android:text="TextView"
                 android:layout_marginBottom="30dp"
+
                 />
+
 
 
             <Button
@@ -106,9 +117,9 @@
                 android:text="Cancel"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="432dp" />
-        </ScrollView>
+
     </LinearLayout>
 
-
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

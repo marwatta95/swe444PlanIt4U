@@ -113,7 +113,7 @@ public class ChooseClownActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
+                final  Intent intent=new Intent(ChooseClownActivity.this, PartyActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );
