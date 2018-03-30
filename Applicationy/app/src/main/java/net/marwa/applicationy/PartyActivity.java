@@ -9,6 +9,7 @@ import android.widget.TextView;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.widget.Toast;
 
 <<<<<<< HEAD
@@ -34,6 +35,8 @@ import java.util.Random;
 >>>>>>> parent of 1c65b2c... commit 28/3
 =======
 >>>>>>> parent of 1c65b2c... commit 28/3
+=======
+>>>>>>> parent of 1c65b2c... commit 28/3
 
 public class PartyActivity extends AppCompatActivity {
     private  Button confirm;
@@ -45,6 +48,7 @@ public class PartyActivity extends AppCompatActivity {
     private TextView clown;
     private TextView custom;
     private TextView food;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +69,9 @@ public class PartyActivity extends AppCompatActivity {
 >>>>>>> parent of 1c65b2c... commit 28/3
 
 >>>>>>> 1c65b2cf2eaac8c92bd075fce05057b15b67d47b
+=======
+
+>>>>>>> parent of 1c65b2c... commit 28/3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +106,7 @@ public class PartyActivity extends AppCompatActivity {
         decor = (TextView)findViewById(R.id.textViewDecor);
         decor.setText(decor1, TextView.BufferType.EDITABLE);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         photographer = (TextView)findViewById(R.id.textViewPhoto);
@@ -218,6 +226,8 @@ public class PartyActivity extends AppCompatActivity {
 >>>>>>> parent of 1c65b2c... commit 28/3
 =======
 >>>>>>> parent of 1c65b2c... commit 28/3
+=======
+>>>>>>> parent of 1c65b2c... commit 28/3
         cancel=(Button) findViewById(R.id.cancel);
 
         cancel.setOnClickListener(new View.OnClickListener()   {
@@ -227,6 +237,7 @@ public class PartyActivity extends AppCompatActivity {
 
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,6 +307,10 @@ public class PartyActivity extends AppCompatActivity {
         //       makeParty=(Button) findViewById(R.id.);
       /*  getIntent().getSerializableExtra("hall");
 >>>>>>> parent of 1c65b2c... commit 28/3
+=======
+        //       makeParty=(Button) findViewById(R.id.);
+      /*  getIntent().getSerializableExtra("hall");
+>>>>>>> parent of 1c65b2c... commit 28/3
         getIntent().getSerializableExtra("appetizer");
         getIntent().getSerializableExtra("decor");
         getIntent().getSerializableExtra("photographer");
@@ -305,6 +320,7 @@ public class PartyActivity extends AppCompatActivity {
         confirm=(Button) findViewById(R.id.confirm);
         confirm.setOnClickListener( new View.OnClickListener()   {
             public void onClick(View v){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,6 +357,8 @@ public class PartyActivity extends AppCompatActivity {
 
 
 >>>>>>> 1c65b2cf2eaac8c92bd075fce05057b15b67d47b
+=======
+>>>>>>> parent of 1c65b2c... commit 28/3
 =======
 >>>>>>> parent of 1c65b2c... commit 28/3
 =======

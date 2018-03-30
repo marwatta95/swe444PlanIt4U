@@ -113,6 +113,7 @@ public class ChooseClownActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 //amira edit the choose Custom to party activity
 =======
 
@@ -128,6 +129,10 @@ public class ChooseClownActivity extends AppCompatActivity {
                 final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
 >>>>>>> parent of 1c65b2c... commit 28/3
 =======
+                final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
+>>>>>>> parent of 1c65b2c... commit 28/3
+=======
+
                 final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
 >>>>>>> parent of 1c65b2c... commit 28/3
                 intent.putExtra( "type", type );
