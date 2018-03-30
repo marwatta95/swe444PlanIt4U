@@ -90,6 +90,7 @@
                 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -105,6 +106,9 @@
 =======
 >>>>>>> parent of 1c65b2c... commit 28/3
 =======
+>>>>>>> parent of 1c65b2c... commit 28/3
+=======
+
 >>>>>>> parent of 1c65b2c... commit 28/3
             <Button
                 android:id="@+id/confirm"
