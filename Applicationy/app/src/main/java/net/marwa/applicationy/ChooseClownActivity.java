@@ -112,7 +112,11 @@ public class ChooseClownActivity extends AppCompatActivity {
         next=(Button) findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+<<<<<<< HEAD
 //amira edit the choose Custom to party activity
+=======
+
+>>>>>>> 1c65b2cf2eaac8c92bd075fce05057b15b67d47b
                 final  Intent intent=new Intent(ChooseClownActivity.this, PartyActivity.class);
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
