@@ -116,8 +116,12 @@ public class ChooseClownActivity extends AppCompatActivity {
 //amira edit the choose Custom to party activity
 =======
 
+<<<<<<< HEAD
 >>>>>>> 1c65b2cf2eaac8c92bd075fce05057b15b67d47b
                 final  Intent intent=new Intent(ChooseClownActivity.this, PartyActivity.class);
+=======
+                final  Intent intent=new Intent(ChooseClownActivity.this, ChooseCustomActivity.class);
+>>>>>>> parent of 1c65b2c... commit 28/3
                 intent.putExtra( "type", type );
                 intent.putExtra( "date", date );
                 intent.putExtra( "guests", guests );

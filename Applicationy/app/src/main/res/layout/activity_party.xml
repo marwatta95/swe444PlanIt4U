@@ -5,22 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="net.marwa.applicationy.PartyActivity">
-
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-
-
-
-
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textViewHall"
@@ -96,14 +87,16 @@
                 android:layout_height="50dp"
                 android:text="TextView"
                 android:layout_marginBottom="30dp"
-
                 />
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 1c65b2cf2eaac8c92bd075fce05057b15b67d47b
+=======
+>>>>>>> parent of 1c65b2c... commit 28/3
             <Button
                 android:id="@+id/confirm"
                 android:layout_width="match_parent"
@@ -120,9 +113,9 @@
                 android:text="Cancel"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="432dp" />
-
+        </ScrollView>
     </LinearLayout>
 
-    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

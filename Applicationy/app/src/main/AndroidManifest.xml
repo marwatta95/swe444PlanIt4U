@@ -94,12 +94,7 @@
             android:name=".ChooseCustomActivity"
             android:label="@string/title_activity_choose_custom"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PartyActivity" />
-        <activity android:name=".HeadActivity" />
-        <activity
-            android:name=".NotificationActivity"
-            android:label="@string/title_activity_notification"
-            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".PartyActivity"></activity>
     </application>
 
 </manifest>
