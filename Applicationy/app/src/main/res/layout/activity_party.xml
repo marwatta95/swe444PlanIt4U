@@ -89,7 +89,6 @@
                 android:layout_marginBottom="30dp"
                 />
 
-
             <Button
                 android:id="@+id/confirm"
                 android:layout_width="match_parent"
